@@ -4,7 +4,10 @@
 
 Installation
 ```sh
-bashpip install matplotlib
+pip install matplotlib
+```
+
+```sh
 Lancer le projet
 bashpython main.py
 ```
