@@ -1,6 +1,5 @@
-# ============================================================
+
 #  ui.py — L'interface graphique (tkinter)
-# ============================================================
 # Ce fichier construit toutes les fenêtres et boutons.
 # Il utilise PerformanceManager (models.py) pour la logique.
 
@@ -12,10 +11,8 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg  # Intègre matp
 from models import PerformanceManager      # On importe notre logique
 
 
-# ==============================================================
-#  CLASSE App — La fenêtre principale
-# ==============================================================
 
+#  CLASSE App — La fenêtre principale
 class App:
 
     # Liste fixe des postes disponibles
@@ -40,9 +37,9 @@ class App:
         # On affiche les données déjà sauvegardées au démarrage
         self.rafraichir_tableau()
 
-    # ----------------------------------------------------------
+ 
     #  En-tête : titre de l'appli
-    # ----------------------------------------------------------
+
     def _build_header(self):
         # Frame = un conteneur pour regrouper des widgets
         header = tk.Frame(self.root, bg="#313244", pady=10)
@@ -56,9 +53,9 @@ class App:
             fg="#cdd6f4"    # Couleur du texte
         ).pack()
 
-    # ----------------------------------------------------------
+
     #  Formulaire : ajouter un footballeur
-    # ----------------------------------------------------------
+   
     def _build_form(self):
         form = tk.Frame(self.root, bg="#1e1e2e", pady=10)
         form.pack(fill="x", padx=20)
@@ -106,9 +103,9 @@ class App:
         # Bouton Graphique — appelle afficher_graphique() au clic
         tk.Button(ligne2, text="📊 Graphique", command=self.afficher_graphique, bg="#89b4fa").pack(side="left")
 
-    # ----------------------------------------------------------
+  
     #  Tableau des footballeurs (Treeview)
-    # ----------------------------------------------------------
+   
     def _build_table(self):
         frame = tk.Frame(self.root, bg="#1e1e2e")
         frame.pack(fill="both", expand=True, padx=20, pady=10)
@@ -146,9 +143,9 @@ class App:
             bg="#f38ba8"    # Rouge clair
         ).pack(pady=5)
 
-    # ----------------------------------------------------------
+    
     #  Footer : affiche le total global
-    # ----------------------------------------------------------
+   
     def _build_footer(self):
         # Label mis à jour à chaque ajout/suppression
         self.label_total = tk.Label(
@@ -160,9 +157,9 @@ class App:
         )
         self.label_total.pack(pady=5)
 
-    # ----------------------------------------------------------
+   
     #  Action : Ajouter un footballeur (appelée par le bouton)
-    # ----------------------------------------------------------
+   
     def ajouter_footballeur(self):
         try:
             nom = self.entry_nom.get()   # .get() récupère la valeur du champ
@@ -183,9 +180,9 @@ class App:
             # Si une conversion échoue, on affiche une popup d'erreur
             messagebox.showerror("Erreur", "Vérifie les nombres !")
 
-    # ----------------------------------------------------------
+    
     #  Action : Supprimer la ligne sélectionnée
-    # ----------------------------------------------------------
+  
     def supprimer_footballeur(self):
         sel = self.tableau.selection()   # Retourne l'id tkinter de la ligne sélectionnée
 
@@ -194,9 +191,9 @@ class App:
             self.manager.supprimer(self.tableau.index(sel[0]))
             self.rafraichir_tableau()
 
-    # ----------------------------------------------------------
+   
     #  Rafraîchir le tableau (après ajout ou suppression)
-    # ----------------------------------------------------------
+  
     def rafraichir_tableau(self):
         # On efface toutes les lignes actuelles du tableau
         for row in self.tableau.get_children():
@@ -215,9 +212,9 @@ class App:
             text=f"Total Global : {self.manager.total_buts()} buts | {self.manager.total_passes()} passes | {self.manager.total_ga()} G/A"
         )
 
-    # ----------------------------------------------------------
+   
     #  Afficher un graphique camembert par poste
-    # ----------------------------------------------------------
+
     def afficher_graphique(self):
         totaux = self.manager.buts_par_poste()   # Dict { poste: total_buts }
 
