@@ -1,13 +1,28 @@
-# PYTHON-SCRIPTING-PROJECT
+## ⚙️ Installation
 
--  Performance Tracker
+**Prérequis :** Python 3.x installé
 
-Installation
-```sh
+Installer la seule dépendance externe :
+
+```bash
 pip install matplotlib
 ```
 
-```sh
-Lancer le projet
-bashpython main.py
+> `tkinter` est déja inclu avec Python, aucune installation nécessaire.
+
+---
+
+##  Lancer l'application
+
+```bash
+python main.py
 ```
+
+## 🤖 Utilisation de l'IA
+
+
+L'**interface graphique** (`ui.py`) a été réalisée en grande partie avec l'aide de l'Ia pour la partie Tkinter, que j'ai ensuite adaptée et personnalisée selon mes besoins de meme pour mainn.py
+
+
+
+---
