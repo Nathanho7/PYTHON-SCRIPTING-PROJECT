@@ -1,6 +1,5 @@
-# ============================================================
+
 #  main.py — Le point d'entrée du programme
-# ============================================================
 # C'est CE fichier qu'on lance avec : python main.py
 # Il crée la fenêtre principale et démarre l'application.
 
