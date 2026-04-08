@@ -1,0 +1,38 @@
+[
+    {
+        "nom": "Thomas",
+        "poste": "Milieu",
+        "buts": 30,
+        "passes_d": 15,
+        "matchs": 36,
+        "date": "2026-04-08",
+        "total_ga": 45
+    },
+    {
+        "nom": "Julien",
+        "poste": "Attaquant",
+        "buts": 4,
+        "passes_d": 12,
+        "matchs": 25,
+        "date": "2026-04-08",
+        "total_ga": 16
+    },
+    {
+        "nom": "NATHANHO",
+        "poste": "Attaquant",
+        "buts": 59,
+        "passes_d": 40,
+        "matchs": 30,
+        "date": "2026-04-08",
+        "total_ga": 99
+    },
+    {
+        "nom": "Messi",
+        "poste": "Attaquant",
+        "buts": 845,
+        "passes_d": 405,
+        "matchs": 1129,
+        "date": "2026-04-08",
+        "total_ga": 1250
+    }
+]
