@@ -1,4 +1,4 @@
-## ⚙️ Installation
+##  Installation
 
 **Prérequis :** Python 3.x installé
 
@@ -18,7 +18,7 @@ pip install matplotlib
 python main.py
 ```
 
-## 🤖 Utilisation de l'IA
+##  Utilisation de l'IA
 
 
 L'**interface graphique** (`ui.py`) a été réalisée en grande partie avec l'aide de l'Ia pour la partie Tkinter, que j'ai ensuite adaptée et personnalisée selon mes besoins de meme pour mainn.py
